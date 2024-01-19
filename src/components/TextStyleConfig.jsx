@@ -7,7 +7,7 @@ const TextStyleConfig = () => {
       </label>
       <label className="config-label">
         Font Color:
-        <input type="color" className="colorPiker" />
+        <input type="color" className="color-piker" />
       </label>
       <label className="config-label">
         Bold:
