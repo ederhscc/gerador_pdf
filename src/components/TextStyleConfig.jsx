@@ -1,9 +1,20 @@
-import React from 'react'
-
 const TextStyleConfig = () => {
   return (
-    <div>TextStyleConfig</div>
-  )
-}
+    <div className="textStyleConfig">
+      <label className="config-label">
+        Font Size:
+        <input type="text" className="input" />
+      </label>
+      <label className="config-label">
+        Font Color:
+        <input type="color" className="colorPiker" />
+      </label>
+      <label className="config-label">
+        Bold:
+        <input type="checkbox" />
+      </label>
+    </div>
+  );
+};
 
-export default TextStyleConfig
+export default TextStyleConfig;

@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
 
 const ImageUpload = () => {
   return (
-    <div>ImageUpload</div>
-  )
-}
+    <div className="imageUpload">
+      <label className="config-label">
+        Upload Image:
+        <input type="file" accept="image/*" className="file-input" />
+      </label>
+    </div>
+  );
+};
 
-export default ImageUpload
+export default ImageUpload;
