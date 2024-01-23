@@ -13,6 +13,7 @@ const GeneratePDF = () => {
   const [fontSize, setFontSize] = useState("12");
   const [fontColor, setFontColor] = useState("#000000");
   const [isBold, setIsBold] = useState(false);
+  const [image, setImage] = useState(null);
 
   const generatePDF = () => {
     // Configuração de estilos
@@ -26,6 +27,7 @@ const GeneratePDF = () => {
       content: [
         { text: `Título: ${title}`, style: "customStyle" },
         { text: `Descrição: ${description}`, style: "customStyle" },
+        image ? { image: image, width: 150 } : {},
       ],
       styles: {
         customStyle: customStyle,
@@ -65,7 +67,7 @@ const GeneratePDF = () => {
         isBold={isBold}
         setIsBold={setIsBold}
       />
-      <ImageUpload />
+      <ImageUpload setImage={setImage} />
       <button className="button" onClick={generatePDF}>
         Gerar PDF
       </button>
